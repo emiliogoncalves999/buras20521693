@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
+
+class Home extends StatefulWidget {
+  // const Home({ Key? key }) : super(key: key);
+
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  bool _isLogin = false;
+  Map _userObj = {};
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: new AppBar(title: new Text('kokokokokoko')),
+      body: new Center(
+          child: _isLogin
+              ? Column(
+                  children: [
+                      Image.network(_userObj['picture']['data']['url']),
+                     Text(_userObj['name']),
+                       Text(_userObj['id']),
+                     Text('csc'),
+                    new TextButton(
+                      child: new Text("Log Out"),
+                      onPressed: () {
+                      FacebookAuth.instance.logOut().then((value) {
+                        setState(() {
+                          _isLogin = false;
+                          _userObj = {};
+                        });
+                      });
+                    })
+                  ],
+                )
+              : Center(
+                  child: ElevatedButton(
+                  child: Text("Login With Facebook"),
+                  onPressed: () async {
+                    FacebookAuth.instance.login(
+    permissions: ['email', 'public_profile', 'user_birthday'], loginBehavior: LoginBehavior.webViewOnly).then((value){
+   FacebookAuth.instance.getUserData().then((userData) {
+                      setState(() {
+                        _isLogin = true;
+                        _userObj = userData;
+                      });
+                     });
+                    });
+                 
+                  },
+              )
+            )
+          ),
+    );
+  }
+}
