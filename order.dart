@@ -979,11 +979,11 @@ class _pajina2State extends State<pajina2> {
       ),
       body: Column(
         children: [
-          QrImage(
-            data: "${widget.id}",
-            version: QrVersions.auto,
-            size: 150.0,
-          ),
+          // QrImage(
+          //   data: "${widget.id}",
+          //   version: QrVersions.auto,
+          //   size: 150.0,
+          // ),
           Expanded(
             child: Container(
                 padding: new EdgeInsets.all(20.0),

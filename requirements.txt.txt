@@ -1,0 +1,36 @@
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+
+  flutter_signin_button: ^2.0.0
+  shared_preferences: ^2.0.6
+  latlng: any
+  #shared_preferences: ^3.0.0
+
+  #firebase_auth: ^1.0.1
+  #google_sign_in: ^5.0.0
+  nested_scroll_controller: ^1.0.0
+  flutter_map: any
+  dio: ^4.0.0
+  
+  loading_gifs: ^0.3.0
+  #google_maps_flutter: ^2.0.6
+  #stripe_payment: ^1.1.4
+  qr_flutter: ^4.0.0
+
+  google_fonts: ^2.1.0
+
+
+    assets:
+    - img/cd.png
+    - img/fb.png
+    - img/cd2.png
+    - img/fblogo.jpg
+    - img/laiha_node.gif
+    - img/falha.gif
+    - img/prossesu.gif
+    - img/cdl.png
+    - img/lh.png
