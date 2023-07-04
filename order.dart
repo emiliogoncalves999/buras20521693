@@ -44,7 +44,7 @@ class _OrderState extends State<Order> with SingleTickerProviderStateMixin {
       });
 
       final response = await dio.get(
-          "https://mpgtl.com/crocodeli/api/orderatualAPI.php?id_kliente=" +
+          "https://999triple999.000webhostapp.com/crocodeli/api/orderatualAPI.php?id_kliente=" +
               idk);
       return jsonDecode(response.data);
     } on DioError catch (e) {
@@ -64,7 +64,8 @@ class _OrderState extends State<Order> with SingleTickerProviderStateMixin {
       });
 
       final response = await dio.get(
-          "https://mpgtl.com/crocodeli/api/lastorderAPI.php?id_kliente=" + idk);
+          "https://999triple999.000webhostapp.com/crocodeli/api/lastorderAPI.php?id_kliente=" +
+              idk);
       return jsonDecode(response.data);
     } on DioError catch (e) {
       setState(() {
@@ -948,7 +949,7 @@ class _pajina2State extends State<pajina2> {
       });
 
       final response = await dio.get(
-          "https://mpgtl.com/crocodeli/api/orderdetallaAPI.php?id=${idor}");
+          "https://999triple999.000webhostapp.com/crocodeli/api/orderdetallaAPI.php?id=${idor}");
       return jsonDecode(response.data);
     } on DioError catch (e) {
       setState(() {

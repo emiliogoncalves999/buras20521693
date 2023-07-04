@@ -39,8 +39,8 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
         koneksaunfallah = true;
       });
 
-      final response =
-          await dio.get("https://mpgtl.com/crocodeli/api/hahanAPI.php");
+      final response = await dio.get(
+          "https://999triple999.000webhostapp.com/crocodeli/api/hahanAPI.php");
       //  await dio.get("https://192.168.43.118/crocodeli/api/hahanAPI.php");
 
       return jsonDecode(response.data);
@@ -60,9 +60,9 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
         koneksaunfallab = true;
       });
 
-      final response =
-          await dio.get("https://mpgtl.com/crocodeli/api/bebidasAPI.php");
-      // await dio.get("https://mpgtl.com/crocodeli/api/bebidasAPI.php");
+      final response = await dio.get(
+          "https://999triple999.000webhostapp.com/crocodeli/api/bebidasAPI.php");
+      // await dio.get("https://999triple999.000webhostapp.com/crocodeli/api/bebidasAPI.php");
       return jsonDecode(response.data);
     } on DioError catch (e) {
       setState(() {
@@ -530,7 +530,7 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
                                           )),
                                           child: new ClipRRect(
                                             child: new Image.network(
-                                              "https://mpgtl.com/crocodeli/img/${ss.data![i]['imagen']}",
+                                              "https://999triple999.000webhostapp.com/crocodeli/img/${ss.data![i]['imagen']}",
                                               height: 190,
                                               width: double.infinity,
                                               //  width: MediaQuery.of(context).size.width,
@@ -698,7 +698,7 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
                                           )),
                                           child: new ClipRRect(
                                             child: new Image.network(
-                                              "https://mpgtl.com/crocodeli/img/${ss.data![i]['imagen']}",
+                                              "https://999triple999.000webhostapp.com/crocodeli/img/${ss.data![i]['imagen']}",
                                               height: 190,
                                               width: double.infinity,
                                               //  width: MediaQuery.of(context).size.width,
@@ -1001,7 +1001,7 @@ class _pajina2State extends State<pajina2> {
                 child: new Material(
                   child: new InkWell(
                     child: new Image.network(
-                      "https://mpgtl.com/crocodeli/img/${widget.gambar}",
+                      "https://999triple999.000webhostapp.com/crocodeli/img/${widget.gambar}",
                       height: 190,
                       width: double.infinity,
                       //  width: MediaQuery.of(context).size.width,
