@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:umadijital_buras/mapaorder.dart';
 import './hahan.dart' as hahan;
 import './bebidas.dart' as bebidas;
 import 'dart:async';
@@ -69,6 +70,8 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
         koneksaunfallab = false;
       });
       return []; // Add this line to return an empty list in case of an error
+    } finally {
+      // Code to be executed regardless of whether an error occurred or not
     }
   }
 
@@ -369,6 +372,11 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
                           back();
                         });
                         Navigator.pop(context);
+
+                        Navigator.of(context).push(new MaterialPageRoute(
+                            builder: (BuildContext context) => new MapSample(
+                                  xxx: send,
+                                )));
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.all(8.0),
@@ -436,7 +444,7 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
                       size: 25.0,
                     ),
                     new Text(
-                      "Konsumu",
+                      "Konsumsi",
                       style: TextStyle(color: Colors.black38),
                     )
                   ])),
@@ -450,7 +458,7 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
                       size: 25.0,
                     ),
                     new Text(
-                      "Busnis ",
+                      "Bisnis",
                       style: TextStyle(color: Colors.black38),
                     )
                   ])),
@@ -468,7 +476,7 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
           "Raga   (${totalosan} \$) ",
           style: TextStyle(fontSize: 11.0),
         ),
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.green,
         onPressed: () {
           if (karakter.length > 0) {
             detalluorder();
@@ -584,7 +592,7 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
                                               label: Text("Aumenta Ba raga"),
                                               style: ElevatedButton.styleFrom(
                                                 padding: EdgeInsets.all(8.0),
-                                                primary: Colors.white,
+                                                primary: Colors.green,
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.all(
@@ -646,8 +654,16 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
                               getDatah();
                             });
                           },
-                          icon: Icon(Icons.error),
-                          label: Text("Koko Fali"),
+                          icon: Icon(
+                            Icons.error,
+                            color: Colors.red,
+                          ),
+                          label: Text(
+                            "Koko Fali",
+                            style: TextStyle(
+                              color: Colors.red,
+                            ),
+                          ),
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.all(8.0),
                             primary: Colors.white,
@@ -655,10 +671,10 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10.0)),
                             ),
-                            textStyle: TextStyle(color: Colors.black45),
+                            textStyle: TextStyle(color: Colors.red),
                             splashFactory: InkSplash.splashFactory,
                           ),
-                        ),
+                        )
                       ])))),
 
         Container(
@@ -752,7 +768,7 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
                                               label: Text("Aumenta Ba raga"),
                                               style: ElevatedButton.styleFrom(
                                                 padding: EdgeInsets.all(8.0),
-                                                primary: Colors.white,
+                                                primary: Colors.green,
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.all(
@@ -814,8 +830,16 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
                               getDatab();
                             });
                           },
-                          icon: Icon(Icons.error),
-                          label: Text("Koko Fali"),
+                          icon: Icon(
+                            Icons.error,
+                            color: Colors.red,
+                          ),
+                          label: Text(
+                            "Koko Fali",
+                            style: TextStyle(
+                              color: Colors.red,
+                            ),
+                          ),
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.all(8.0),
                             primary: Colors.white,
@@ -823,10 +847,10 @@ class _FoodsState extends State<Foods> with SingleTickerProviderStateMixin {
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10.0)),
                             ),
-                            textStyle: TextStyle(color: Colors.black45),
+                            textStyle: TextStyle(color: Colors.red),
                             splashFactory: InkSplash.splashFactory,
                           ),
-                        ),
+                        )
                       ])))),
 
 //foods

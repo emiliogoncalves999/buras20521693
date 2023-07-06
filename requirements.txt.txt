@@ -33,4 +33,4 @@
     - img/falha.gif
     - img/prossesu.gif
     - img/cdl.png
-    - img/lh.png
+    - img/lh.pngN
